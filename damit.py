@@ -4,6 +4,8 @@ import shutil
 client_name = input('Client name (case sensitive): ')
 project_name = input('Project name: ')
 
-path = os.path.join(client_name, project_name)
+cwd = os.getcwd()
+old_path = os.path.join(cwd, '11 Profession/File Tree/')
+new_path = os.path.join(cwd, client_name, project_name)
 
-shutil.copytree('old', path)
+shutil.copytree(old_path, new_path)
